@@ -1,11 +1,15 @@
 # Experimenting with pixi
 
+Tested with `pixi 0.62.1`.
+
 Seems really fast to install packages and it seems to integrate the python environment with VS Code just fine.
 
 Keep in mind most of the pixi management process is automated with high level commands. Adding/removing packages via the cli auto-updates the `.toml` file. I'm not sure how much you can edit the pyproject.toml directly without it breaking things. For greater control, I'd probably still recommend just using `pip` with `pyproject.toml` combo.
 
 
 ## Useful commands
+
+Install with: `curl -fsSL https://pixi.sh/install.sh | sh`
 
 This creates a whole directory with a `pyproject.toml` file.
 `pixi init pixi_hello_world --format pyproject`
