@@ -1,4 +1,4 @@
-# Experimenting with pixi
+# Experimenting with `pixi`
 
 Tested with `pixi 0.62.1`.
 
