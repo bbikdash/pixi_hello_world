@@ -59,3 +59,8 @@ pixi remove numpy scipy loguru matplotlib tqdm
 
 If the package still appears in the `pixi list` despite removing it, it's because another package is using it as a transitive dependency. Transitive dependencies, I think, are not highlighted in the pixi list whereas properly trued installed packages are.
 
+`pixi clean <cache>` will delete all of the installed packages in physically in `.pixi` directories but will not remove it from the pyproject.toml.
+
+## Other Notes
+
+The `pyproject.toml` is the source of truth for packages. If you clean the env, and `pixi install` it will rebuild the lock file and reinstall the packages that have been added in pyproject.toml. To truly remove a package from the venv, remove it manually from `pyproject.toml` or use `pixi remove` which updates the `.toml`
